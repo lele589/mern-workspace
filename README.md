@@ -1,1 +1,1 @@
-# mern-workspace
+MERN workspace exercises
