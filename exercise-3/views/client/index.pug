@@ -1,0 +1,25 @@
+extends ../layout
+
+block content
+    .d-flex.justify-content-between.align-items-center.mb-4
+        h1= title
+        a.btn.btn-info(href="/client/new") Añadir cliente
+    table.table.table-striped.table-borderless
+            thead.thead-dark
+                tr
+                    th(scope="col") Nombre
+                    th(scope="col") Profesión
+                    th(scope="col") Experiencia
+                    th(scope="col") Trabajo
+                    th(scope="col")
+            tbody
+                each client in clients 
+                    tr
+                        td= client.name
+                        td= client.job
+                        td= client.experience + ' años'
+                        td= client.isWorking ? 'Trabajando' : 'Parado'
+                        td
+                            a.btn.btn-danger.js-delete(href="/client/delete/"+client._id, onclick="return confirm('¿Estás seguro?')") Borrar
+                else 
+                    p No hay clientes en la base de datos

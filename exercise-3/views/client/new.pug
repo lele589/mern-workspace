@@ -1,0 +1,40 @@
+extends ../layout.pug
+
+block content
+    h1= title
+    p.font-weight-bold Añade la información del nuevo cliente:
+    form.form-inline(id="newForm", action="/client/new", method="POST")
+        .form-group.mb-4.col-12
+            .row
+              label.form-label.col Nombre
+              input.form-control.col(
+                  type="text", 
+                  placeholder="Nombre",
+                  name="name",
+                  required)
+        .form-group.mb-4.col-12
+          .row
+            label.form-label.col Profesión
+            select.custom-select.col(name="job", required)
+                option(selected, disabled, value="") Elige la profesión
+                option(value="Frontend") Frontend
+                option(value="Backend") Backend
+                option(value="Devops") Devops
+        .form-group.mb-4.col-12
+          .row
+              label.form-label.col Experiencia
+              input.form-control.col(
+                  type="number", 
+                  placeholder="5",
+                  name="experience"
+                  required)
+              .input-group-append 
+                span.input-group-text años
+        .form-group.mb-4.col-12
+            .form-check.mr-3 
+                input.form-check-input(
+                    type="checkbox",
+                    name="isWorking")
+                label.form-check-label(for="isWorkingTrue") Estoy trabajando
+        .form-group.mb-4.col-12
+          input.btn.btn-info(type="submit", value="Enviar")
