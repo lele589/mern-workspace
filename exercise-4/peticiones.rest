@@ -1,0 +1,78 @@
+GET http://localhost:3000/api/clientes
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOiI2MDVmMDI3NGZkZTZkNjQ3YTllMDM0OTAiLCJjYWR1Y2EiOjE2MTY4NDM2NjYsImlhdCI6MTYxNjg0MzA2Nn0.QIi-iMjnlhpuo2amNUONd4QVu4waZhZin5LzU-ymMf8
+
+###
+POST http://localhost:3000/api/clientes
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOiI2MDVmMDI3NGZkZTZkNjQ3YTllMDM0OTAiLCJjYWR1Y2EiOjE2MTY4NDA5MjMsImlhdCI6MTYxNjg0MDMyM30.fUWd4z_lrYpRrWm3odNglKVfb4F_iHjA3r61mAQ3x98
+
+{
+    "nombre": "garcia",
+    "apellidos": "martín",
+    "email": "rosa@aq.it",
+    "cuota": 10,
+    "activo": true,
+    "dni": "22222222S"
+}
+
+###
+PUT http://localhost:3000/api/clientes/604bf7059c7167039825381c
+Content-Type: application/json
+
+{
+    "nombre" : "Ana",
+    "apellidos" : "González",
+    "email" : "anagon@gmail.com",
+    "cuota" : 20,
+    "activo" : true
+}
+
+###
+DELETE http://localhost:3000/api/clientes/604bf7059c7167039825381c
+
+###
+POST http://localhost:3000/api/usuarios/registro
+Content-Type: application/json
+
+{
+    "username": "usuarioAdmin",
+    "email": "usuarioAdmin@mail.com",
+    "password": "holaMundo123"
+}
+
+###
+POST http://localhost:3000/api/usuarios/login
+Content-Type: application/json
+
+{
+    "email": "usuarioAdmin@mail.com",
+    "password": "holaMundo123"
+}
+
+###
+GET http://localhost:3000/api/teachers
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOiI2MDZiNDM5ZjQyNjQzYjI0Mjk2ZjU3MjEiLCJjYWR1Y2EiOjE2MTc2NDMwMDgsImlhdCI6MTYxNzY0MjQwOH0.peGE6pbMabjoI9tNjKggtupeuRadSKbTRNnvH3Dgcfw
+
+###
+POST http://localhost:3000/api/teachers
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOiI2MDZiNDM5ZjQyNjQzYjI0Mjk2ZjU3MjEiLCJjYWR1Y2EiOjE2MTc2NDMwMDgsImlhdCI6MTYxNzY0MjQwOH0.peGE6pbMabjoI9tNjKggtupeuRadSKbTRNnvH3Dgcfw
+
+{
+    "nombre": "Profesor3",
+    "apellidos": "López3",
+    "especialidad": "spinning",
+    "edad": 32
+}
+
+###
+PUT http://localhost:3000/api/teachers/606b426e16d41b24013abd03
+Content-Type: application/json
+
+{
+    "especialidad": "padel",
+    "edad" : 30
+}
+
+###
+DELETE http://localhost:3000/api/teachers/606b426e16d41b24013abd03
