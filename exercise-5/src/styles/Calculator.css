@@ -1,0 +1,22 @@
+.calculator {
+    width: 400px;
+}
+
+.calculator__keyboard {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+}
+
+.calculator__operations {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 6px;
+    margin: 10px 0;
+}
+
+.calculator__numbers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 6px;
+}

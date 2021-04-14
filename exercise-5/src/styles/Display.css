@@ -1,0 +1,14 @@
+.display {
+    width: 359px;
+    border: 0;
+    height: 70px;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: right;
+    padding: 0 20px;
+    border-radius: 15px;
+}
+
+.display:focus {
+    outline: none;
+}
