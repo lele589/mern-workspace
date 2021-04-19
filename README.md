@@ -38,3 +38,8 @@
     - Creación de una calculadora con números del 0-9 y operaciones matemáticas básicas (+,-,*,/)
     - En la pantalla de la calculadora deben ir apareciendo las operaciones
     - El botón '=' debe devolver el resultado del input ya evaluado
+
+## Ejercicio 6 (semana 5)
+> **Lenguajes**: **_ReactJS_** (styled components)
+- Compra online
+    - Desarrollar una interface donde se muestre un listado de productos y un carrito de la compra dónde añadirlos
